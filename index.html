@@ -1,1 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Spotting the Pattern: What a Normal Job Application Should Never Ask For</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600&family=Source+Serif+4:ital,wght@0,400;0,500;0,600;1,400&family=IBM+Plex+Mono:wght@500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#F1EEE6;
+    --ink:#1C2A2E;
+    --ink-soft:#4B5A5C;
+    --rule:#D6D0C2;
+    --flag:#B5502E;
+    --flag-bg:#F4DFCE;
+    --trust:#3F6357;
+    --trust-bg:#DCE7E0;
+    --white:#FBFAF6;
+    --max:680px;
+  }
 
+  *{ box-sizing:border-box; }
+
+  body{
+    margin:0;
+    background:var(--paper);
+    color:var(--ink);
+    font-family:'Source Serif 4', Georgia, serif;
+    font-size:19px;
+    line-height:1.65;
+    -webkit-font-smoothing:antialiased;
+  }
+
+  a{ color:var(--trust); }
+
+  .wrap{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px 100px;
+  }
+
+  /* -------- Header -------- */
+  header{
+    padding:64px 0 40px;
+    border-bottom:1px solid var(--rule);
+    margin-bottom:48px;
+  }
+
+  .eyebrow{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    font-weight:600;
+    letter-spacing:0.14em;
+    text-transform:uppercase;
+    color:var(--flag);
+    display:flex;
+    align-items:center;
+    gap:10px;
+    margin-bottom:22px;
+  }
+
+  .eyebrow::before{
+    content:"";
+    width:8px;
+    height:8px;
+    background:var(--flag);
+    border-radius:1px;
+    transform:rotate(45deg);
+    flex-shrink:0;
+  }
+
+  h1{
+    font-family:'Fraunces', serif;
+    font-optical-sizing:auto;
+    font-weight:500;
+    font-size:clamp(32px, 6vw, 46px);
+    line-height:1.12;
+    letter-spacing:-0.01em;
+    margin:0 0 20px;
+  }
+
+  .dek{
+    font-family:'Source Serif 4', serif;
+    font-style:italic;
+    font-size:20px;
+    color:var(--ink-soft);
+    margin:0 0 26px;
+    max-width:56ch;
+  }
+
+  .byline{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12.5px;
+    color:var(--ink-soft);
+    display:flex;
+    gap:18px;
+    flex-wrap:wrap;
+  }
+
+  .byline strong{ color:var(--ink); }
+
+  /* -------- Body typography -------- */
+  h2{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:27px;
+    line-height:1.28;
+    margin:56px 0 20px;
+    letter-spacing:-0.005em;
+  }
+
+  p{ margin:0 0 22px; }
+
+  .lede::first-letter{
+    font-family:'Fraunces', serif;
+    font-size:64px;
+    font-weight:500;
+    float:left;
+    line-height:0.8;
+    padding:8px 8px 0 0;
+    color:var(--flag);
+  }
+
+  /* -------- Flag tag / red-flag callouts -------- */
+  .flag-row{
+    display:flex;
+    gap:16px;
+    margin:0 0 22px;
+    align-items:flex-start;
+  }
+
+  .flag-tag{
+    flex-shrink:0;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--flag);
+    background:var(--flag-bg);
+    border:1px solid #e0bfa4;
+    padding:4px 9px;
+    border-radius:3px;
+    margin-top:4px;
+    white-space:nowrap;
+  }
+
+  .flag-row p{ margin:0; }
+
+  /* -------- Stat callouts -------- */
+  .stats{
+    display:grid;
+    grid-template-columns:1fr 1fr;
+    gap:1px;
+    background:var(--rule);
+    border:1px solid var(--rule);
+    margin:36px 0 40px;
+  }
+
+  .stat{
+    background:var(--white);
+    padding:26px 22px;
+  }
+
+  .stat .num{
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:38px;
+    line-height:1;
+    color:var(--ink);
+    display:block;
+    margin-bottom:8px;
+  }
+
+  .stat .label{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:12px;
+    color:var(--ink-soft);
+    line-height:1.5;
+  }
+
+  @media (max-width:520px){
+    .stats{ grid-template-columns:1fr; }
+  }
+
+  /* -------- Verification checklist (signature element) -------- */
+  .verify-block{
+    background:var(--white);
+    border:1px solid var(--rule);
+    border-left:4px solid var(--trust);
+    padding:30px 28px;
+    margin:44px 0;
+    position:relative;
+  }
+
+  .verify-block .stamp{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.1em;
+    text-transform:uppercase;
+    color:var(--trust);
+    background:var(--trust-bg);
+    display:inline-block;
+    padding:4px 10px;
+    border-radius:3px;
+    margin-bottom:16px;
+  }
+
+  .verify-block ul{
+    margin:0;
+    padding:0;
+    list-style:none;
+  }
+
+  .verify-block li{
+    display:flex;
+    gap:12px;
+    padding:14px 0;
+    border-top:1px solid var(--rule);
+  }
+
+  .verify-block li:first-of-type{ border-top:none; }
+
+  .verify-block li::before{
+    content:"✓";
+    font-family:'IBM Plex Mono', monospace;
+    font-weight:600;
+    color:var(--trust);
+    flex-shrink:0;
+    padding-top:2px;
+  }
+
+  .verify-block li strong{
+    display:block;
+    font-family:'Source Serif 4', serif;
+    font-weight:600;
+    margin-bottom:2px;
+  }
+
+  .verify-block li span{
+    color:var(--ink-soft);
+    font-size:17px;
+    line-height:1.5;
+  }
+
+  /* -------- Pull quote -------- */
+  blockquote{
+    margin:40px 0;
+    padding:2px 0 2px 24px;
+    border-left:3px solid var(--flag);
+    font-family:'Fraunces', serif;
+    font-weight:500;
+    font-size:23px;
+    line-height:1.45;
+    color:var(--ink);
+    font-style:italic;
+  }
+
+  /* -------- Closing -------- */
+  .closing{
+    margin-top:56px;
+    padding-top:32px;
+    border-top:1px solid var(--rule);
+    font-size:17.5px;
+    color:var(--ink-soft);
+  }
+
+  .closing strong{ color:var(--ink); }
+
+  footer{
+    max-width:var(--max);
+    margin:0 auto;
+    padding:0 24px 60px;
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11.5px;
+    color:var(--ink-soft);
+    letter-spacing:0.02em;
+  }
+
+  @media (max-width:600px){
+    body{ font-size:17px; }
+    header{ padding:44px 0 32px; }
+    .lede::first-letter{ font-size:50px; }
+  }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Field notes · Job search</div>
+    <h1>Spotting the Pattern: What a "Normal" Job Application Should Never Ask For</h1>
+    <p class="dek">A keyword in the subject line is a fair test. Bundled with an ID, a data sheet, and a video of your face before anyone tells you who they are, it's something else.</p>
+    <div class="byline">
+      <span><strong>Freilla Espinola</strong></span>
+      <span>Web engineering · project management · community</span>
+    </div>
+  </header>
+
+  <p class="lede">I have been job hunting for a while now, tailoring resumes, writing cover letters, and going through the usual motions of trying to land the right role. Along the way, I started noticing a pattern that bothered me enough to write about it.</p>
+
+  <p>A "keyword in the subject line" instruction is a fair test. It tells a recruiter you actually read the posting instead of mass-applying. I have no issue with that.</p>
+
+  <p>What I do have an issue with is when that instruction shows up bundled with something else: a request for a full personal data sheet, a government ID, and a self-recorded video introduction, all before there is any human on the other end you can name. No company name in the posting. No founder or hiring manager you can look up. No way to verify who is actually asking for this information.</p>
+
+  <p>Individually, none of these asks is unheard of. Together, on a first-contact application with zero verifiable identity behind it, they start to look less like hiring and more like collection.</p>
+
+  <h2>Why this combination is the red flag, not any single item</h2>
+
+  <p>A real hiring process almost always gives you something to verify: a company domain, a named recruiter, a LinkedIn profile with an actual work history, an office you could look up on a map. Scam-adjacent postings tend to strip all of that away while asking for more from you in return.</p>
+
+  <blockquote>Verification should flow both ways. If a company will not tell you who they are, you should not be handing over who you are.</blockquote>
+
+  <p>The FTC has pointed out that legitimate employers generally do not request sensitive personal information before an actual interview takes place, and they do not run hiring entirely through chat apps like WhatsApp or Telegram. When a posting asks for your ID, personal details, and a video of your face and voice before you have even spoken to a real person, that is backwards.</p>
+
+  <p>This is not just an inconvenience. Personal data sheets, IDs, and video recordings are exactly the raw material used for identity theft, account takeovers, and increasingly, deepfake generation. A single clear video of your face and voice is enough training material for a voice clone or a face-swap filter. Once that is out there, it can be reused in ways that have nothing to do with your job search.</p>
+
+  <h2>The scam landscape has changed, and it moves in both directions</h2>
+
+  <p>Most of what gets written about AI and hiring fraud right now focuses on companies worrying about fake candidates: deepfake interviewees, proxy hires, and AI-generated identities gaming the process. Industry researchers have tracked a sharp jump in this kind of fraud in the past year.</p>
+
+  <div class="stats">
+    <div class="stat">
+      <span class="num">1,000%+</span>
+      <span class="label">rise in deepfake attempts in hiring, year over year, per industry trackers</span>
+    </div>
+    <div class="stat">
+      <span class="num">$500M+</span>
+      <span class="label">consumer losses to job scams in 2024, up from $90M in 2020, per FTC data</span>
+    </div>
+  </div>
+
+  <p>But the same tools work in the other direction, against job seekers. Fraudsters use AI-generated job postings, cloned company websites, and increasingly convincing recruiter personas, complete with polished profiles and realistic video calls, to harvest personal information at scale. What used to be obvious, bad grammar, a Gmail address, a vague company name, is now much harder to spot, because generative AI has closed that gap.</p>
+
+  <p>The uncomfortable part is that the underlying job can be completely real, and the process can still be exploitative. A company does not need to be a total fabrication to be running a careless or predatory intake process. Sometimes it is simply a low-effort operation that never bothered to build a legitimate verification step, and personal data collection became the path of least resistance.</p>
+
+  <h2>What I am doing differently now</h2>
+
+  <div class="flag-row">
+    <span class="flag-tag">Check</span>
+    <p><strong>I look for a name before I hand over anything.</strong> A recruiter, a hiring manager, a founder, someone with a LinkedIn history and a role I can cross-check against the company's actual site. No name, no data.</p>
+  </div>
+
+  <div class="flag-row">
+    <span class="flag-tag">Check</span>
+    <p><strong>I check the domain, not just the logo.</strong> Scammers frequently register lookalike domains that differ from the real company by a hyphen or a letter. I check the sender's email domain against the company's actual website before replying to anything.</p>
+  </div>
+
+  <div class="flag-row">
+    <span class="flag-tag">Check</span>
+    <p><strong>I treat "record a video of yourself" like "send your ID."</strong> Both are biometric or identity data. I do not send either without a named point of contact and a verifiable company behind the request.</p>
+  </div>
+
+  <div class="flag-row">
+    <span class="flag-tag">Check</span>
+    <p><strong>I never send financial details or IDs over chat apps.</strong> If the entire process happens over WhatsApp or Telegram with no company email in sight, that alone is enough for me to step back.</p>
+  </div>
+
+  <div class="flag-row">
+    <span class="flag-tag">Check</span>
+    <p><strong>I slow down when there's urgency.</strong> Scam recruiting counts on job search fatigue and the pressure to respond quickly. A legitimate process can wait a day for me to verify who I am talking to.</p>
+  </div>
+
+  <div class="verify-block">
+    <span class="stamp">Keep vs. drop</span>
+    <ul>
+      <li><span><strong>Keep:</strong> the subject-line keyword. It costs nothing and proves you read the posting.</span></li>
+      <li><span><strong>Drop:</strong> handing over a full data sheet, ID, and self-recorded video before a single named human is on the other end.</span></li>
+    </ul>
+  </div>
+
+  <div class="closing">
+    <p>Part of why I am active in <strong>Python Philippines</strong> and <strong>Django Girls CDO</strong> is that so much of what protects our community comes down to sharing what we have already figured out, so the next person does not have to learn it the hard way. Job hunting is stressful enough without also having to run a fraud investigation on every posting that lands in your inbox. If this pattern sounds familiar to you, it is worth naming it out loud, and worth pausing before you send anything you cannot take back.</p>
+  </div>
+</div>
+
+<footer>Freilla Espinola — Opol, Misamis Oriental, Philippines · Python Philippines · Django Girls CDO</footer>
+
+</body>
+</html>
