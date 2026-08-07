@@ -48,27 +48,24 @@
     margin-bottom:48px;
   }
 
-  .eyebrow{
-    font-family:'IBM Plex Mono', monospace;
-    font-size:12px;
-    font-weight:600;
-    letter-spacing:0.14em;
-    text-transform:uppercase;
-    color:var(--flag);
+  .tags{
     display:flex;
-    align-items:center;
-    gap:10px;
-    margin-bottom:22px;
+    flex-wrap:wrap;
+    gap:8px;
+    margin-bottom:24px;
   }
 
-  .eyebrow::before{
-    content:"";
-    width:8px;
-    height:8px;
-    background:var(--flag);
-    border-radius:1px;
-    transform:rotate(45deg);
-    flex-shrink:0;
+  .tag{
+    font-family:'IBM Plex Mono', monospace;
+    font-size:11px;
+    font-weight:600;
+    letter-spacing:0.06em;
+    text-transform:uppercase;
+    color:var(--flag);
+    background:var(--flag-bg);
+    border:1px solid #e0bfa4;
+    padding:5px 10px;
+    border-radius:3px;
   }
 
   h1{
@@ -291,12 +288,16 @@
 
 <div class="wrap">
   <header>
-    <div class="eyebrow">Field notes · Job search</div>
+    <div class="tags">
+      <span class="tag">Job Search</span>
+      <span class="tag">Project Management</span>
+      <span class="tag">Hiring</span>
+      <span class="tag">Community</span>
+    </div>
     <h1>Spotting the Pattern: What a "Normal" Job Application Should Never Ask For</h1>
-    <p class="dek">A keyword in the subject line is a fair test. Bundled with an ID, a data sheet, and a video of your face before anyone tells you who they are, it's something else.</p>
+    <p class="dek">A keyword in the subject line is a fair test. Bundled with a full personal data form and a video of your face before anyone tells you who they are, it's something else.</p>
     <div class="byline">
-      <span><strong>Freilla Espinola</strong></span>
-      <span>Web engineering · project management · community</span>
+      <span><strong><a href="https://www.linkedin.com/in/freillamae" target="_blank">Freilla Espinola</a></strong></span>
     </div>
   </header>
 
@@ -304,7 +305,7 @@
 
   <p>A "keyword in the subject line" instruction is a fair test. It tells a recruiter you actually read the posting instead of mass-applying. I have no issue with that.</p>
 
-  <p>What I do have an issue with is when that instruction shows up bundled with something else: a request for a full personal data sheet, a government ID, and a self-recorded video introduction, all before there is any human on the other end you can name. No company name in the posting. No founder or hiring manager you can look up. No way to verify who is actually asking for this information.</p>
+  <p>What I do have an issue with is when that instruction shows up bundled with something else: a form asking for your full name, contact number, email address, complete home address, and birthdate, plus a self-recorded video introduction, all before there is any human on the other end you can name. No company name in the posting. No founder or hiring manager you can look up. No way to verify who is actually asking for this information.</p>
 
   <p>Individually, none of these asks is unheard of. Together, on a first-contact application with zero verifiable identity behind it, they start to look less like hiring and more like collection.</p>
 
@@ -314,9 +315,9 @@
 
   <blockquote>Verification should flow both ways. If a company will not tell you who they are, you should not be handing over who you are.</blockquote>
 
-  <p>The FTC has pointed out that legitimate employers generally do not request sensitive personal information before an actual interview takes place, and they do not run hiring entirely through chat apps like WhatsApp or Telegram. When a posting asks for your ID, personal details, and a video of your face and voice before you have even spoken to a real person, that is backwards.</p>
+  <p>The FTC has pointed out that legitimate employers generally do not request sensitive personal information before an actual interview takes place, and they do not run hiring entirely through chat apps like WhatsApp or Telegram. When a posting asks for your full contact details, home address, birthdate, and a video of your face and voice before you have even spoken to a real person, that is backwards.</p>
 
-  <p>This is not just an inconvenience. Personal data sheets, IDs, and video recordings are exactly the raw material used for identity theft, account takeovers, and increasingly, deepfake generation. A single clear video of your face and voice is enough training material for a voice clone or a face-swap filter. Once that is out there, it can be reused in ways that have nothing to do with your job search.</p>
+  <p>This is not just an inconvenience. Full personal data forms and video recordings are exactly the raw material used for identity theft, account takeovers, and increasingly, deepfake generation. A single clear video of your face and voice is enough training material for a voice clone or a face-swap filter. Once that is out there, it can be reused in ways that have nothing to do with your job search.</p>
 
   <h2>The scam landscape has changed, and it moves in both directions</h2>
 
@@ -351,7 +352,7 @@
 
   <div class="flag-row">
     <span class="flag-tag">Check</span>
-    <p><strong>I treat "record a video of yourself" like "send your ID."</strong> Both are biometric or identity data. I do not send either without a named point of contact and a verifiable company behind the request.</p>
+    <p><strong>I treat "record a video of yourself" like "hand over my full personal details."</strong> Both are identity data. I do not send either without a named point of contact and a verifiable company behind the request.</p>
   </div>
 
   <div class="flag-row">
@@ -368,16 +369,16 @@
     <span class="stamp">Keep vs. drop</span>
     <ul>
       <li><span><strong>Keep:</strong> the subject-line keyword. It costs nothing and proves you read the posting.</span></li>
-      <li><span><strong>Drop:</strong> handing over a full data sheet, ID, and self-recorded video before a single named human is on the other end.</span></li>
+      <li><span><strong>Drop:</strong> handing over your full contact details, home address, birthdate, and a self-recorded video before a single named human is on the other end.</span></li>
     </ul>
   </div>
 
   <div class="closing">
-    <p>Part of why I am active in <strong>Python Philippines</strong> and <strong>Django Girls CDO</strong> is that so much of what protects our community comes down to sharing what we have already figured out, so the next person does not have to learn it the hard way. Job hunting is stressful enough without also having to run a fraud investigation on every posting that lands in your inbox. If this pattern sounds familiar to you, it is worth naming it out loud, and worth pausing before you send anything you cannot take back.</p>
+    <p>Part of why I am active in <strong>Python Asia Organization</strong> and <strong>Python Philippines</strong> is that so much of what protects our community comes down to sharing what we have already figured out, so the next person does not have to learn it the hard way. Job hunting is stressful enough without also having to run a fraud investigation on every posting that lands in your inbox. If this pattern sounds familiar to you, it is worth naming it out loud, and worth pausing before you send anything you cannot take back.</p>
   </div>
 </div>
 
-<footer>Freilla Espinola — Opol, Misamis Oriental, Philippines · Python Philippines · Django Girls CDO</footer>
+<footer><a href="https://www.linkedin.com/in/freillamae" target="_blank">Freilla Espinola</a> — Philippines · <a href="https://pythonasia.org/" target="_blank">Python Asia Organization</a> · <a href="https://python.ph/" target="_blank">Python PH</a></footer>
 
 </body>
 </html>
