@@ -1,6 +1,6 @@
 # blog
 
-Source for [freillamae13.github.io/blog](https://freillamae13.github.io/blog/), built with a small Python script instead of a framework.
+Built with a small Python script instead of a framework.
 
 ## How it works
 
@@ -11,7 +11,7 @@ Source for [freillamae13.github.io/blog](https://freillamae13.github.io/blog/), 
   - `index.html`, the blog list page
   - `posts/<slug>.html`, one file per post
 
-GitHub Pages just serves the generated HTML. There's no server-side Python at runtime, the Python only runs when you build the site.
+GitHub Pages just serves the generated HTML. There's no server-side Python at runtime. The Python only runs when you build the site.
 
 ## Add a new post
 
