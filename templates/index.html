@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block content %}
+<div class="wrap">
+  <header class="list-header">
+    <h1>Blog</h1>
+    <p>Notes on building Freiya Studio, plus the tech, work, and community writing that goes with it.</p>
+  </header>
+
+  {% for post in posts %}
+  <a class="post-card" href="{{ root }}posts/{{ post.slug }}.html">
+    <div class="tags">
+      {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
+    </div>
+    <h2 class="card-title">{{ post.title }}</h2>
+    <p class="dek">{{ post.dek }}</p>
+    <div class="byline">
+      <span><strong>{{ post.author }}</strong></span>
+      <span>{{ post.date_display }}</span>
+    </div>
+  </a>
+  {% endfor %}
+</div>
+
+<footer>iamella.com &middot; built with a small Python script, not a framework</footer>
+{% endblock %}
