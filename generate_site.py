@@ -41,7 +41,7 @@ def build():
     index_template = env.get_template("index.html")
     index_html = index_template.render(
         page_title="Blog",
-        meta_description="Notes on building Freiya Studio, plus tech, work, and community writing.",
+        meta_description="Personal essays, career and tech notes, and the slow build of Freiya Studio.",
         root="",
         posts=posts,
     )
