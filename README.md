@@ -8,8 +8,8 @@ Built with a small Python script instead of a framework.
 - `templates/` holds the Jinja2 HTML templates (shared header/footer, post layout, list layout).
 - `static/style.css` holds all the styling.
 - `generate_site.py` reads the posts, runs them through the templates, and writes plain HTML:
-  - `index.html` — the blog list page
-  - `posts/<slug>.html` — one file per post
+  - `index.html`, the blog list page
+  - `posts/<slug>.html`, one file per post
 
 GitHub Pages just serves the generated HTML. There's no server-side Python at runtime. The Python only runs when you build the site.
 
@@ -31,4 +31,12 @@ If you'd rather not run the build locally every time, `.github/workflows/build.y
 
 ## Deploying
 
-GitHub Pages settings for this repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**. The `CNAME` file keeps the custom domain (`iamella.com`) pointed at this repo.
+GitHub Pages settings for this repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
+
+This build uses the default GitHub Pages URL, `freillamae13.github.io/blog`, no custom domain. If a `CNAME` file exists in the repo (left over from a previous setup), delete it:
+
+```bash
+git rm CNAME
+```
+
+Then in **Settings → Pages → Custom domain**, clear the field and click Save, and remove the DNS records at your domain registrar if you had added any for `iamella.com`.
