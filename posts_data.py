@@ -15,14 +15,13 @@ POSTS = [
     {
         "slug": "i-have-a-name-now-what",
         "title": "I Have a Name. Now What?",
-        "dek": "Starting Freiya Studio with a name, a reason, and no idea what step one is supposed to look like.",
         "tags": ["Freiya Studio", "Founder Notes", "Small Business"],
         "date": "2026-08-10",
         "date_display": "August 10, 2026",
-        "author": "Freiya Studio",
-        "author_url": None,
+        "author": "Freilla Espinola",
+        "author_url": "https://www.linkedin.com/in/freillamae",
         "body_html": """
-  <p class="lede">I have a name. Freiya Studio.</p>
+  <p>I have a name. Freiya Studio.</p>
 
   <p>I've said it out loud to myself more times than I'd like to admit. I've typed it into notes apps, scribbled it on the back of receipts, imagined it on a website, on an invoice, on a business card I don't have yet. It feels right, even though right now it belongs to nothing but a Google Doc and a lot of half-finished thoughts.</p>
 
@@ -56,14 +55,13 @@ POSTS = [
     {
         "slug": "spotting-the-pattern",
         "title": 'Spotting the Pattern: What a "Normal" Job Application Should Never Ask For',
-        "dek": "A keyword in the subject line is a fair test. Bundled with a full personal data form and a video of your face before anyone tells you who they are, it's something else.",
         "tags": ["Job Search", "Project Management", "Hiring", "Community"],
-        "date": "2026-07-01",
-        "date_display": "July 1, 2026",
+        "date": "2026-08-09",
+        "date_display": "August 9, 2026",
         "author": "Freilla Espinola",
         "author_url": "https://www.linkedin.com/in/freillamae",
         "body_html": """
-  <p class="lede">I have been job hunting for a while now, tailoring resumes, writing cover letters, and going through the usual motions of trying to land the right role. Along the way, I started noticing a pattern that bothered me enough to write about it.</p>
+  <p>I have been job hunting for a while now, tailoring resumes, writing cover letters, and going through the usual motions of trying to land the right role. Along the way, I started noticing a pattern that bothered me enough to write about it.</p>
 
   <p>A "keyword in the subject line" instruction is a fair test. It tells a recruiter you actually read the posting instead of mass-applying. I have no issue with that.</p>
 
