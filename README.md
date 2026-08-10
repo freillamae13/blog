@@ -1,6 +1,6 @@
 # blog
 
-Source for [iamella.com](https://iamella.com), built with a small Python script instead of a framework.
+Built with a small Python script instead of a framework.
 
 ## How it works
 
@@ -11,7 +11,7 @@ Source for [iamella.com](https://iamella.com), built with a small Python script 
   - `index.html` — the blog list page
   - `posts/<slug>.html` — one file per post
 
-GitHub Pages just serves the generated HTML. There's no server-side Python at runtime, the Python only runs when you build the site.
+GitHub Pages just serves the generated HTML. There's no server-side Python at runtime. The Python only runs when you build the site.
 
 ## Add a new post
 
@@ -32,16 +32,3 @@ If you'd rather not run the build locally every time, `.github/workflows/build.y
 ## Deploying
 
 GitHub Pages settings for this repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**. The `CNAME` file keeps the custom domain (`iamella.com`) pointed at this repo.
-
-## Replacing the old repo contents
-
-This was rebuilt from the previous single-file `index.html`. To apply it:
-
-```bash
-git clone https://github.com/freillamae13/blog.git
-cd blog
-# copy every file from this folder into the repo, overwriting index.html
-git add .
-git commit -m "Rebuild site with Python generator, add blog list + Freiya Studio post"
-git push
-```
