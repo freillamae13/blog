@@ -6,7 +6,6 @@
       {% for tag in post.tags %}<span class="tag">{{ tag }}</span>{% endfor %}
     </div>
     <h1>{{ post.title }}</h1>
-    <p class="dek">{{ post.dek }}</p>
     <div class="byline">
       <span><strong>{% if post.author_url %}<a href="{{ post.author_url }}" target="_blank">{{ post.author }}</a>{% else %}{{ post.author }}{% endif %}</strong></span>
       <span>{{ post.date_display }}</span>

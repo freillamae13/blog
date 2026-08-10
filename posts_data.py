@@ -15,6 +15,7 @@ POSTS = [
     {
         "slug": "i-have-a-name-now-what",
         "title": "I Have a Name. Now What?",
+        "dek": "A founder's-note post about starting Freiya Studio with nothing but a name and a reason. It's honest about not knowing the practical next steps (website, branding, registration) and lands on the idea that most things worth building start messy, not with a full plan.",
         "tags": ["Freiya Studio", "Founder Notes", "Small Business"],
         "date": "2026-08-10",
         "date_display": "August 10, 2026",
@@ -55,9 +56,10 @@ POSTS = [
     {
         "slug": "spotting-the-pattern",
         "title": 'Spotting the Pattern: What a "Normal" Job Application Should Never Ask For',
+        "dek": "A job-search safety post breaking down a red flag Freilla noticed while applying to roles: postings that bundle a subject-line test with a full personal data form and a self-recorded video before any verifiable human or company is on the other end. It backs the warning with FTC and industry data on job scams and deepfake fraud, then closes with a concrete checklist of what to verify before handing over any personal information.",
         "tags": ["Job Search", "Project Management", "Hiring", "Community"],
         "date": "2026-08-09",
-        "date_display": "August 9, 2026",
+        "date_display": "August 7, 2026",
         "author": "Freilla Espinola",
         "author_url": "https://www.linkedin.com/in/freillamae",
         "body_html": """
