@@ -1,7 +1,7 @@
 :root{
   --paper:#EFEAF3;
   --ink:#2E2038;
-  --ink-soft:#6E5C7C;
+  --ink-soft:#584B67;
   --rule:#DCD0E4;
   --accent:#8C6AA8;
   --accent-bg:#E9DEF0;
@@ -17,9 +17,9 @@ body{
   margin:0;
   background:var(--paper);
   color:var(--ink);
-  font-family:'Cormorant Garamond', Georgia, serif;
-  font-size:21px;
-  line-height:1.65;
+  font-family:'DM Sans', -apple-system, sans-serif;
+  font-size:18px;
+  line-height:1.7;
   -webkit-font-smoothing:antialiased;
 }
 
@@ -39,8 +39,9 @@ a{ color:var(--accent); }
   display:flex;
   justify-content:space-between;
   align-items:center;
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:13px;
+  font-weight:500;
   letter-spacing:0.04em;
   text-transform:uppercase;
 }
@@ -54,12 +55,12 @@ a{ color:var(--accent); }
 .site-nav a:hover{ color:var(--accent); }
 
 .site-nav .home-link{
-  font-family:'Playfair Display', serif;
+  font-family:'Instrument Serif', serif;
   font-style:italic;
-  font-weight:600;
+  font-weight:400;
   text-transform:none;
   letter-spacing:0;
-  font-size:17px;
+  font-size:20px;
   color:var(--ink);
 }
 
@@ -78,7 +79,7 @@ header.post-header{
 }
 
 .tag{
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:11.5px;
   font-weight:600;
   letter-spacing:0.08em;
@@ -91,27 +92,30 @@ header.post-header{
 }
 
 h1{
-  font-family:'Playfair Display', serif;
-  font-weight:600;
+  font-family:'Instrument Serif', serif;
+  font-weight:400;
   font-style:italic;
-  font-size:clamp(32px, 6vw, 48px);
-  line-height:1.14;
+  font-size:clamp(38px, 7vw, 56px);
+  line-height:1.1;
   letter-spacing:-0.005em;
   margin:0 0 20px;
 }
 
 .dek{
-  font-family:'Cormorant Garamond', serif;
-  font-style:italic;
-  font-size:21px;
+  font-family:'DM Sans', sans-serif;
+  font-style:normal;
+  font-weight:500;
+  font-size:19px;
+  line-height:1.6;
   color:var(--ink-soft);
   margin:0 0 26px;
   max-width:56ch;
 }
 
 .byline{
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:13px;
+  font-weight:500;
   letter-spacing:0.02em;
   color:var(--ink-soft);
   display:flex;
@@ -119,13 +123,14 @@ h1{
   flex-wrap:wrap;
 }
 
-.byline strong{ color:var(--ink); }
+.byline strong{ color:var(--ink); font-weight:600; }
 
 /* -------- Body typography -------- */
 h2{
-  font-family:'Playfair Display', serif;
-  font-weight:600;
-  font-size:28px;
+  font-family:'Instrument Serif', serif;
+  font-weight:400;
+  font-style:italic;
+  font-size:32px;
   line-height:1.3;
   margin:56px 0 20px;
   letter-spacing:-0.005em;
@@ -134,12 +139,12 @@ h2{
 p{ margin:0 0 22px; }
 
 .lede::first-letter{
-  font-family:'Playfair Display', serif;
-  font-size:66px;
-  font-weight:600;
+  font-family:'Instrument Serif', serif;
+  font-size:72px;
+  font-weight:400;
   font-style:italic;
   float:left;
-  line-height:0.78;
+  line-height:0.75;
   padding:8px 8px 0 0;
   color:var(--accent);
 }
@@ -154,7 +159,7 @@ p{ margin:0 0 22px; }
 
 .flag-tag{
   flex-shrink:0;
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:11.5px;
   font-weight:600;
   letter-spacing:0.08em;
@@ -186,9 +191,9 @@ p{ margin:0 0 22px; }
 }
 
 .stat .num{
-  font-family:'Playfair Display', serif;
-  font-weight:600;
-  font-size:38px;
+  font-family:'Instrument Serif', serif;
+  font-weight:400;
+  font-size:44px;
   line-height:1;
   color:var(--ink);
   display:block;
@@ -196,7 +201,7 @@ p{ margin:0 0 22px; }
 }
 
 .stat .label{
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:12.5px;
   color:var(--ink-soft);
   line-height:1.5;
@@ -217,7 +222,7 @@ p{ margin:0 0 22px; }
 }
 
 .verify-block .stamp{
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:11.5px;
   font-weight:600;
   letter-spacing:0.1em;
@@ -247,7 +252,7 @@ p{ margin:0 0 22px; }
 
 .verify-block li::before{
   content:"✦";
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-weight:600;
   color:var(--accent-2);
   flex-shrink:0;
@@ -256,14 +261,14 @@ p{ margin:0 0 22px; }
 
 .verify-block li strong{
   display:block;
-  font-family:'Cormorant Garamond', serif;
-  font-weight:600;
+  font-family:'DM Sans', sans-serif;
+  font-weight:700;
   margin-bottom:2px;
 }
 
 .verify-block li span{
   color:var(--ink-soft);
-  font-size:18px;
+  font-size:16px;
   line-height:1.5;
 }
 
@@ -272,10 +277,10 @@ blockquote{
   margin:40px 0;
   padding:2px 0 2px 24px;
   border-left:3px solid var(--accent);
-  font-family:'Playfair Display', serif;
-  font-weight:600;
-  font-size:24px;
-  line-height:1.45;
+  font-family:'Instrument Serif', serif;
+  font-weight:400;
+  font-size:28px;
+  line-height:1.4;
   color:var(--ink);
   font-style:italic;
 }
@@ -285,26 +290,26 @@ blockquote{
   margin-top:56px;
   padding-top:32px;
   border-top:1px solid var(--rule);
-  font-size:19px;
+  font-size:17px;
   color:var(--ink-soft);
 }
 
-.closing strong{ color:var(--ink); }
+.closing strong{ color:var(--ink); font-weight:600; }
 
 footer{
   max-width:var(--max);
   margin:0 auto;
   padding:0 24px 60px;
-  font-family:'Josefin Sans', sans-serif;
+  font-family:'DM Sans', sans-serif;
   font-size:12px;
   color:var(--ink-soft);
   letter-spacing:0.03em;
 }
 
 @media (max-width:600px){
-  body{ font-size:19px; }
+  body{ font-size:16.5px; }
   header.post-header{ padding:36px 0 32px; }
-  .lede::first-letter{ font-size:52px; }
+  .lede::first-letter{ font-size:56px; }
 }
 
 /* -------- Blog list page -------- */
@@ -319,9 +324,11 @@ footer{
 }
 
 .list-header p{
-  font-family:'Cormorant Garamond', serif;
-  font-style:italic;
-  font-size:21px;
+  font-family:'DM Sans', sans-serif;
+  font-style:normal;
+  font-weight:500;
+  font-size:19px;
+  line-height:1.6;
   color:var(--ink-soft);
   margin:0;
   max-width:56ch;
@@ -340,11 +347,11 @@ footer{
 .post-card .tags{ margin-bottom:14px; }
 
 h2.card-title{
-  font-family:'Playfair Display', serif;
-  font-weight:600;
+  font-family:'Instrument Serif', serif;
+  font-weight:400;
   font-style:italic;
-  font-size:29px;
-  line-height:1.22;
+  font-size:34px;
+  line-height:1.2;
   margin:0 0 12px;
   color:var(--ink);
 }
