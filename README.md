@@ -1,6 +1,6 @@
 # blog
 
-Source for [iamella.com](https://iamella.com), built with a small Python script instead of a framework.
+Source for [freillamae13.github.io/blog](https://freillamae13.github.io/blog/), built with a small Python script instead of a framework.
 
 ## How it works
 
@@ -8,8 +8,8 @@ Source for [iamella.com](https://iamella.com), built with a small Python script 
 - `templates/` holds the Jinja2 HTML templates (shared header/footer, post layout, list layout).
 - `static/style.css` holds all the styling.
 - `generate_site.py` reads the posts, runs them through the templates, and writes plain HTML:
-  - `index.html` — the blog list page
-  - `posts/<slug>.html` — one file per post
+  - `index.html`, the blog list page
+  - `posts/<slug>.html`, one file per post
 
 GitHub Pages just serves the generated HTML. There's no server-side Python at runtime, the Python only runs when you build the site.
 
@@ -31,17 +31,12 @@ If you'd rather not run the build locally every time, `.github/workflows/build.y
 
 ## Deploying
 
-GitHub Pages settings for this repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**. The `CNAME` file keeps the custom domain (`iamella.com`) pointed at this repo.
+GitHub Pages settings for this repo: **Settings → Pages → Build and deployment → Deploy from a branch → `main` / `(root)`**.
 
-## Replacing the old repo contents
-
-This was rebuilt from the previous single-file `index.html`. To apply it:
+This build uses the default GitHub Pages URL, `freillamae13.github.io/blog`, no custom domain. If a `CNAME` file exists in the repo (left over from a previous setup), delete it:
 
 ```bash
-git clone https://github.com/freillamae13/blog.git
-cd blog
-# copy every file from this folder into the repo, overwriting index.html
-git add .
-git commit -m "Rebuild site with Python generator, add blog list + Freiya Studio post"
-git push
+git rm CNAME
 ```
+
+Then in **Settings → Pages → Custom domain**, clear the field and click Save, and remove the DNS records at your domain registrar if you had added any for `iamella.com`.
